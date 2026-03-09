@@ -3,7 +3,7 @@ type Props = {
 
   perPage: number;
 
-  currentPage: number;
+  currentPage?: number;
 
   onPageChange: (page: number) => void;
 };
@@ -11,7 +11,7 @@ type Props = {
 export const Pagination = ({
   total,
   perPage,
-  currentPage,
+  currentPage = 1,
   onPageChange,
 }: Props) => {
   const totalPages = Math.ceil(total / perPage);
